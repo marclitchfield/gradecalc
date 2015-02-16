@@ -1,0 +1,16 @@
+button {
+  margin: .2rem;
+}
+
+.computed-grade {
+  width: 12rem;
+  text-align: center;
+  font-size: 3em;
+  border-radius: .5rem;
+}
+
+.grade-5 { background-color: #F4CCCC; }
+.grade-4 { background-color: #FFF2CC; }
+.grade-3 { background-color: #D9EAD3; }
+.grade-2 { background-color: #C9DAF8; }
+.grade-1 { background-color: #D9D2E9; }

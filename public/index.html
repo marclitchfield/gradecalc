@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="GradeCalc">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body ng-controller="GradeController">
+    <div class="container">
+      <div class="row">
+        <button class="btn" ng-class="{'btn-primary':$parent.gradeLevel===$index}" 
+                ng-repeat="level in gradeLevels" ng-click="$parent.gradeLevel=$index">{{level}}</button>
+      </div>
+      <div class="row">
+        <h4>Number correct at <strong>current</strong> grade level</h4>
+        <button class="btn" ng-class="{'btn-primary':$parent.currentScore===score}" 
+                ng-repeat="score in scoresAtCurrentLevel()" ng-click="$parent.currentScore=score">{{score}}</button>
+      </div></em>
+      <div class="row">
+        <h4>Number correct <strong>above</strong> grade level</h4>
+        <button class="btn" ng-class="{'btn-primary':$parent.nextScore===score}" 
+                ng-repeat="score in scoresAtNextLevel()" ng-click="$parent.nextScore=score">{{score}}</button>
+      </div>
+      <div class="row" ng-show="computedGrade() !== undefined">
+        <h4>Grade</h4>
+        <div class="computed-grade grade-{{computedGrade()}}">{{computedGrade()}}</div>
+      </div>
+    </div>
+  </body>
+</html>
