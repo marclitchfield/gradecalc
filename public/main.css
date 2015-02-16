@@ -1,5 +1,30 @@
+.container {
+  padding: 0;
+  margin: 1em;
+  box-shadow: 0 0 30px 6px hsla(227, 22%, 29%, 1);
+  border-radius: .5em;
+}
+
+.content {
+  margin: 1em;
+  padding: 0 1em;
+}
+
+.caption h3 {
+  background-color: hsla(227, 22%, 40%, 1);
+  color: white;
+  border-top-left-radius: .2em;
+  border-top-right-radius: .2em;
+  margin: 0;
+  padding: .5em .7em;
+}
+
 button {
   margin: .2rem;
+}
+
+button:focus {
+  outline: 0 !important;
 }
 
 .computed-grade {
